@@ -1,20 +1,13 @@
 <template>
   <div class="card overflow-hidden">
-    <table class="w-full table-fixed border-collapse text-sm">
-      <colgroup>
-        <col style="width: 10%" />
-        <col style="width: 12%" />
-        <col style="width: 8%" />
-        <col style="width: 30%" />
-        <col style="width: 40%" />
-      </colgroup>
+    <table class="w-full border-collapse text-sm">
       <thead>
         <tr class="border-b border-gray-100 bg-gray-50/50 text-xs font-medium uppercase tracking-wide text-gray-500 dark:border-dark-700 dark:bg-dark-800/50 dark:text-gray-400">
-          <th class="px-4 py-3 text-center">{{ columns.name }}</th>
-          <th class="px-4 py-3 text-left">{{ columns.description }}</th>
-          <th class="px-4 py-3 text-left">{{ columns.platform }}</th>
-          <th class="px-4 py-3 text-left">{{ columns.groups }}</th>
-          <th class="px-4 py-3 text-left">{{ columns.supportedModels }}</th>
+          <th class="whitespace-nowrap px-4 py-3 text-center">{{ columns.name }}</th>
+          <th class="whitespace-nowrap px-4 py-3 text-left">{{ columns.description }}</th>
+          <th class="whitespace-nowrap px-4 py-3 text-left">{{ columns.platform }}</th>
+          <th class="whitespace-nowrap px-4 py-3 text-left">{{ columns.groups }}</th>
+          <th class="whitespace-nowrap px-4 py-3 text-left">{{ columns.supportedModels }}</th>
         </tr>
       </thead>
       <tbody v-if="loading">
