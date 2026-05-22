@@ -24,9 +24,7 @@ services:
   # Sub2API Application
   # ===========================================================================
   sub2api:
-    build:
-      context: ..
-      dockerfile: Dockerfile
+    image: ${SUB2API_IMAGE:?SUB2API_IMAGE is required}
     container_name: ${SUB2API_CONTAINER_NAME:-sub2api}
     restart: unless-stopped
     ulimits:
