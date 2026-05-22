@@ -6,8 +6,8 @@
           <th class="w-[180px] px-4 py-3 text-center">{{ columns.name }}</th>
           <th class="w-[200px] px-4 py-3 text-left">{{ columns.description }}</th>
           <th class="w-[140px] px-4 py-3 text-left">{{ columns.platform }}</th>
-          <th class="px-4 py-3 text-left">{{ columns.groups }}</th>
-          <th class="px-4 py-3 text-left">{{ columns.supportedModels }}</th>
+          <th class="w-[260px] px-4 py-3 text-left">{{ columns.groups }}</th>
+          <th class="w-[320px] px-4 py-3 text-left">{{ columns.supportedModels }}</th>
         </tr>
       </thead>
       <tbody v-if="loading">
