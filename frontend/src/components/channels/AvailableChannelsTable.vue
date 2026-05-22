@@ -1,13 +1,13 @@
 <template>
-  <div class="card overflow-hidden">
+  <div class="card overflow-x-auto">
     <table class="w-full border-collapse text-sm">
       <thead>
         <tr class="border-b border-gray-100 bg-gray-50/50 text-xs font-medium uppercase tracking-wide text-gray-500 dark:border-dark-700 dark:bg-dark-800/50 dark:text-gray-400">
-          <th class="whitespace-nowrap px-4 py-3 text-center">{{ columns.name }}</th>
-          <th class="whitespace-nowrap px-4 py-3 text-left">{{ columns.description }}</th>
-          <th class="whitespace-nowrap px-4 py-3 text-left">{{ columns.platform }}</th>
-          <th class="whitespace-nowrap px-4 py-3 text-left">{{ columns.groups }}</th>
-          <th class="whitespace-nowrap px-4 py-3 text-left">{{ columns.supportedModels }}</th>
+          <th class="min-w-[120px] whitespace-nowrap px-4 py-3 text-center">{{ columns.name }}</th>
+          <th class="min-w-[140px] whitespace-nowrap px-4 py-3 text-left">{{ columns.description }}</th>
+          <th class="min-w-[100px] whitespace-nowrap px-4 py-3 text-left">{{ columns.platform }}</th>
+          <th class="min-w-[200px] whitespace-nowrap px-4 py-3 text-left">{{ columns.groups }}</th>
+          <th class="min-w-[200px] whitespace-nowrap px-4 py-3 text-left">{{ columns.supportedModels }}</th>
         </tr>
       </thead>
       <tbody v-if="loading">
