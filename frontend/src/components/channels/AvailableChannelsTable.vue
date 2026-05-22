@@ -1,13 +1,13 @@
 <template>
-  <div class="card overflow-hidden">
-    <table class="w-full table-fixed border-collapse text-sm">
+  <div class="card overflow-x-auto">
+    <table class="w-full border-collapse text-sm">
       <thead>
         <tr class="border-b border-gray-100 bg-gray-50/50 text-xs font-medium uppercase tracking-wide text-gray-500 dark:border-dark-700 dark:bg-dark-800/50 dark:text-gray-400">
-          <th class="w-[180px] px-4 py-3 text-center">{{ columns.name }}</th>
-          <th class="w-[200px] px-4 py-3 text-left">{{ columns.description }}</th>
-          <th class="w-[140px] px-4 py-3 text-left">{{ columns.platform }}</th>
-          <th class="px-4 py-3 text-left">{{ columns.groups }}</th>
-          <th class="px-4 py-3 text-left">{{ columns.supportedModels }}</th>
+          <th class="min-w-[120px] whitespace-nowrap px-4 py-3 text-center">{{ columns.name }}</th>
+          <th class="min-w-[140px] whitespace-nowrap px-4 py-3 text-left">{{ columns.description }}</th>
+          <th class="min-w-[100px] whitespace-nowrap px-4 py-3 text-left">{{ columns.platform }}</th>
+          <th class="min-w-[200px] whitespace-nowrap px-4 py-3 text-left">{{ columns.groups }}</th>
+          <th class="min-w-[200px] whitespace-nowrap px-4 py-3 text-left">{{ columns.supportedModels }}</th>
         </tr>
       </thead>
       <tbody v-if="loading">
@@ -73,7 +73,7 @@
 
           <!-- 分组：专属分组在前（紫色 shield 行），公开分组在后（灰色 globe 行）。 -->
           <td class="align-top px-4 py-3">
-            <div class="max-w-[260px] flex flex-col gap-1.5">
+            <div class="flex flex-col gap-1.5">
               <div
                 v-if="exclusiveGroups(section).length > 0"
                 class="flex flex-wrap items-center gap-1.5"
@@ -124,7 +124,7 @@
 
           <!-- 支持模型 -->
           <td class="align-top px-4 py-3">
-            <div class="max-w-[340px] flex flex-wrap gap-1">
+            <div class="flex flex-wrap gap-1">
               <SupportedModelChip
                 v-for="m in section.supported_models"
                 :key="`${section.platform}-${m.name}`"
